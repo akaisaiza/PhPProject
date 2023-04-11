@@ -1,4 +1,6 @@
-<?php include("incs/menu.php"); ?>
+<?php include("./incs/header.php"); ?>
+
+<?php include("./incs/menu.php"); ?>
 <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
