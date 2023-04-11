@@ -1,4 +1,4 @@
-<?php include("./incs/header.php"); ?>
+
 
 <?php include("./incs/menu.php"); ?>
 <section id="hero">
@@ -53,5 +53,5 @@
     
 
 
-    <?php include("incs/footer.php"); ?>
+    <?php include("./incs/footer.php"); ?>
     

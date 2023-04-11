@@ -9,8 +9,15 @@ $config = new Config();
 
 // Khởi tạo DbContext với cấu hình từ Config
 $dbContext = new DB($config->db);
-$username = $_POST["txtUsername"];
-$passInput = $_POST["txtPassword"];
+$username = null;
+$passInput = null;
+if (isset($_POST["txtUsername"])) {
+    $username = (string)$_POST["txtUsername"];
+}
+
+if (isset($_POST["txtPassword"])) {
+    $passInput = (string)$_POST["txtPassword"];
+}
 // Chuẩn bị truy vấn"
 $query = $dbContext->prepare("SELECT * FROM User where Username = '$username'");
 $nameErr = null;
@@ -26,15 +33,16 @@ foreach ($results as $row) {
     array_push($users, $user);
 }
 if($users == null){
-    $nameErr =" Ban chua dien gi";
+    $nameErr =" You need Enter Account";
 }else if($users != null)
     foreach($users as $user){
          $pass = $user -> Password; 
          if($pass == $hashed_password){
-            header('Location: Index.php');
-            exit();
+            // header('Location: /Index.php');
+            echo "<script language='javascript'> location.href = '/index.php'</script>";
+            // exit();
          }else{
-            $nameErr = " Login deo  thanh cong";
+            $nameErr = " Login Error !";
          }
     }
 ?>

@@ -12,7 +12,7 @@
     <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
       <ul>
         <li><a href="#">About</a></li>
-        <li><a href="#"> Our Team</a></li>
+        <li><a href="/view/Contact.php"> Contact</a></li>
       </ul>
     </li>
     <li><a href="#">Shop</a></li>
